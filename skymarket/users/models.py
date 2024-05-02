@@ -26,6 +26,13 @@ class User(AbstractBaseUser):
     REQUIRED_FIELDS = ['first_name', 'last_name']
     objects = UserManager()
 
+    def __str__(self):
+        return f'{self.email}'
+
+    class Meta:
+        verbose_name = 'пользователь'
+        verbose_name_plural = 'пользователи'
+
     @property
     def is_admin(self):
         return self.role == UserRoles.ADMIN
