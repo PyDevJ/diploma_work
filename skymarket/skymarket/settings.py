@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "ads",
     "redoc",
     'rest_framework_simplejwt',
+    'django_filters',
 ]
 
 
