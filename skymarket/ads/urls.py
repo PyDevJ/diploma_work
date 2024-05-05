@@ -2,8 +2,8 @@ from django.urls import include, path
 from rest_framework.routers import SimpleRouter
 from rest_framework_nested import routers
 
-from ads.apps import SalesConfig
-from ads.views import AdViewSet, AdsListAPIView, CommentViewSet
+from .apps import SalesConfig
+from .views import AdViewSet, AdsListAPIView, CommentViewSet
 
 # TODO настройка роутов для модели
 

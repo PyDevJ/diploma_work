@@ -2,11 +2,11 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, generics
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
-from ads.filters import AdFilter
-from ads.models import Ad, Comment
-from ads.paginators import AdsPaginator
-from ads.permissions import IsOwner, IsAdmin
-from ads.serializers import AdSerializer, AdDetailSerializer, CommentSerializer
+from .filters import AdFilter
+from .models import Ad, Comment
+from .paginators import AdsPaginator
+from .permissions import IsOwner, IsAdmin
+from .serializers import AdSerializer, AdDetailSerializer, CommentSerializer
 
 
 # TODO view функции. Предлагаем Вам следующую структуру - но Вы всегда можете использовать свою

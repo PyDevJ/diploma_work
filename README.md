@@ -16,18 +16,18 @@ ___
 ### Создать виртуальное окружение
 * `python -m venv env`
 
-#### Активировать виртуальное окружение
+### Активировать виртуальное окружение
 * `env/Scripts/activate (Windows)`
 * `source env/bin/activate (Linux, MacOS)`
 
 ### Установить зависимости
 * `pip install -r skymarket\requirements.txt`
 
-### Создать файл .env и записать в него переменные окружения по шаблону .env.example
+### Создать файл `.env` и записать в него переменные окружения по шаблону `.env.example`
 
 ### Создать базу данных
 * `psql -U postgres`
-* `SREATE DATABASE skymarket;`
+* `CREATE DATABASE skymarket;`
 
 ### Применить миграции 
 * `python skymarket\manage.py makemigrations`
@@ -40,11 +40,12 @@ ___
 ### Запустить приложение
 * `python skymarket\manage.py runserver`
 
-### Доступ к backend по адресу
-* http://localhost:8000/api/
+### Доступ к backend с документацией API по адресу
+* http://localhost:8000/api/swagger/
+___
 
 ### Настройки Docker-compose
-#### Создать файл .env.docker и записать в него необходимые для работы проекта переменные окружения по шаблону .env.docker.example
+#### Создать файл `.env.docker` и записать в него переменные окружения по шаблону `.env.docker.example`
 #### Команды для запуска
 * `docker-compose build` - создать контейнеры docker
 * `docker-compose up` - запустить контейнеры docker

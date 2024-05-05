@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from ads.models import Ad, Comment
+from .models import Ad, Comment
 
 # TODO здесь можно подкючить ваши модели к стандартной джанго-админке
 # admin.site.register(Ad)
@@ -16,6 +16,5 @@ class AdAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-
     list_display = ('pk', 'ad', 'author', 'text', 'created_at')
     list_filter = ('author',)
