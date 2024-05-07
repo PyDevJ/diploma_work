@@ -55,7 +55,9 @@ class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
 
     def get_queryset(self):
-        return self.queryset.filter(ad=self.kwargs['ad_pk'])
+        # return self.queryset.filter(ad=self.kwargs['ad_pk'])
+        return self.queryset.filter(ad=self.kwargs.get('ad_pk'))
+        # return Comment.objects.filter(ad=self.kwargs.get('ad_pk'))
 
     def get_permissions(self):
 
